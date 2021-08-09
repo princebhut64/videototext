@@ -6,8 +6,8 @@ import json
 import requests
 from urllib.request import urlopen
 transcribe = boto3.client('transcribe')
-job_name = "Jstechno"
-job_uri = "s3://jstech1/test.mp4"
+job_name = "Your_Job_name"
+job_uri = "Upload_your_"
 transcribe.start_transcription_job(
     TranscriptionJobName=job_name,
     Media={'MediaFileUri': job_uri},
@@ -30,21 +30,3 @@ with open("jsohgnn.json", "wb") as Pypdf:
     for chunk in r.iter_content(chunk_size = 1024):
         if chunk:
             Pypdf.write(chunk)
-
-
-# print(
-#     f"Download the transcript from\n"
-#     f"\t{status['TranscriptionJob']['Transcript']['TranscriptFileUri']}.")
-
-# l={status['TranscriptionJob']['Transcript']['TranscriptFileUri']}
-# '''
-# p=str(l)
-# remote_url = p
-# local_file = 'asrOutput.json'
-# json.download(remote_url, local_file)
-# '''
-# p=str(l)
-# urllib.request.urlretrieve(p, "/open.json")
-# response = urlopen(p)
-# data_json = json.loads(response.read())
-# print(data_json)
