@@ -6,8 +6,8 @@ import json
 import requests
 from urllib.request import urlopen
 transcribe = boto3.client('transcribe')
-job_name = "Your_Job_name"
-job_uri = "Upload_your_"
+job_name = "enter_Your_Job_name"
+job_uri = "Upload_your_s3_bucket_name"
 transcribe.start_transcription_job(
     TranscriptionJobName=job_name,
     Media={'MediaFileUri': job_uri},
