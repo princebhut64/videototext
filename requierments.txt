@@ -7,3 +7,6 @@ import urlopen
 
 
 video to text installing many python library amazon serviece our aws-cli
+                            &
+   json file to txt start: and Ends: point on subtitle are convert to using on 
+   https://www.yash.info/aws-srt-creator.htm  (json to txt)
